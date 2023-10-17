@@ -1,16 +1,31 @@
 {
     "env": {
-        "browser": true,
-        "es2021": true
+        "node": true,
+        "es2020": true
     },
-    "extends": "airbnb-base",
-    "overrides": [
+    "extends": [
+        "prettier",
+        "airbnb-base",
+        "plugin:prettier/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": 2022
     },
     "rules": {
-        "linebreak-style": ["error", "windows"],
-        "max-classes-per-file": ["error", 10]
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "linebreak-style": "off",
+        "max-classes-per-file": "off",
+        "no-console": "off",
+        "no-shadow":"off",
+        "lines-between-class-members": "off",
+        "prefer-destructuring": "off",
+        "no-continue": "off",
+        "no-restricted-syntax": "off",
+        "no-unused-vars": "off"
     }
 }
